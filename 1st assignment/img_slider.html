@@ -5,11 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Slider</title>
 </head>
 
 <body>
+    <!-- 1. Create a image slider and image change after every 3 seconds (5 images) -->
     <h2>Image slider</h2>
+
+    <img src="image/slider1.jpg" width="100%" height="500" alt="">
+    <img src="image/slider2.jpg" width="100%" height="500" alt="">
+    <img src="image/slider3.jpg" width="100%" height="500" alt="">
+    <img src="image/slider4.jpg" width="100%" height="500" alt="">
+    <img src="image/slider5.png" width="100%" height="500" alt="">
+
+
+    <script>
+        imgCount = 0;
+        showSlides();
+        // console.log(imgCount);
+
+        function startSlider() {
+            interval = setInterval(showSlides, 3000);
+        }
+
+        function showSlides() {
+            imgArr = document.getElementsByTagName("img");
+
+            for (i = 0; i < imgArr.length; i++) {
+                imgArr[i].style.display = "none";
+            }
+            imgCount++;
+            // console.log("inc " + imgCount);
+
+            if (imgCount > imgArr.length) {
+                // console.log("if cond count " + imgCount);
+                imgCount = 1
+                startSlider();
+            }
+
+            imgArr[imgCount - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+
+        }
+    </script>
 </body>
 
 </html>
