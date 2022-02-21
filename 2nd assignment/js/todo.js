@@ -12,8 +12,8 @@ function print_notes() {
         elem.setAttribute("id", "abc" + i_val);
         elem.setAttribute("class", "d-flex p-3 border");
 
-        var btnDiv = document.createElement("div");
-        editBtn.setAttribute("id", "dtnBlock" + i_val);
+        // var btnDiv = document.createElement("div");
+        // editBtn.setAttribute("id", "dtnBlock" + i_val);
 
         var editBtn = document.createElement("button");
         editBtn.innerHTML = "<i class='btn text-white'>Edit</i>";

@@ -27,7 +27,6 @@
             text-decoration: none;
             color: #000;
             text-align: left;
-            font-size: 18px;
         }
     </style>
 </head>
@@ -42,10 +41,12 @@
                     <input type="text" id="email" class="form-control" placeholder="Email" onblur="email_vali()">
 
                     <span id="email_error"></span>
-                    <input type="text" id="password" class="form-control" placeholder="Password" onblur="password_vali()">
+                    <input type="password" id="password" class="form-control" placeholder="Password" onblur="password_vali()">
                     <span id="password_error"></span>
+                    <div class="d-flex align-items-center">
+                        <input type="checkbox" class="m-0" name="" id=""><span id="rememberBtn">Remember Me</span>
 
-                    <a href="#" id="rememberBtn">Remember Me</a>
+                    </div>
                     <button type="submit" class="btn btn-outline-dark btn-md btn-block">Submit</button>
                 </form>
             </div>

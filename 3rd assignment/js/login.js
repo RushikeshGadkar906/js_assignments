@@ -53,10 +53,9 @@ function validateForm() {
         if (email_val == "admin123@gmail.com" && password_val == "12345678")
             return true;
         else {
-            login_error.innerHTML = "Invalid Email & Password"
+            login_error.innerHTML = "Email or password is not correct"
             return false;
         }
-
     } else
         return false
 
