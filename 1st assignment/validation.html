@@ -36,6 +36,7 @@
         let span_email = document.getElementById("span_email");
         let span_phone = document.getElementById("span_phone");
         var regName = /^[a-zA-Z]$/;
+        regMobile = /^[6-9][0-9]{9}$/;
 
         function val_fname() {
             fname = fname_value.value;
@@ -70,8 +71,8 @@
                 span_phone.innerHTML = "This field is required";
             } else if (isNaN(phone)) {
                 span_phone.innerHTML = "characters not allowed";
-            } else if (phone.length != 10) {
-                span_phone.innerHTML = "Enter correct mobile number";
+            } else if (!regMobile.test(phone)) {
+                span_phone.innerHTML = "10 Digit mobile number allow";
             } else {
                 phone_value.style.border = "3px solid green";
                 span_phone.innerHTML = "";
