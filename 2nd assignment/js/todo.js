@@ -30,6 +30,7 @@ function print_notes() {
 
 
         document.getElementById("target").appendChild(elem);
+
         document.getElementById("abc" + i_val).appendChild(editBtn);
         document.getElementById("abc" + i_val).appendChild(delBtn);
     }
