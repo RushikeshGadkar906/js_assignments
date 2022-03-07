@@ -27,6 +27,7 @@
 
     <script>
         function getPosts() {
+
             const URL = "https://jsonplaceholder.typicode.com/posts";
             fetch(URL)
                 .then(res => res.json())
@@ -35,9 +36,13 @@
                     data.map((post) => {
                         // console.log("Title - " + post.title);
                         // console.log("Title - " + post.body);
+
+
                         var title = document.createElement("h5");
                         title.innerHTML = "Title : " + post.title;
+
                         var body = document.createElement("p");
+
                         body.innerHTML = "Body : " + post.body;
                         var line = document.createElement("hr");
 
@@ -46,6 +51,7 @@
                         document.getElementById("printPosts").appendChild(line);
 
                     })
+
                 })
                 .catch(err => {
                     var error = document.createElement("p");
