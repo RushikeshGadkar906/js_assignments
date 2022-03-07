@@ -11,6 +11,12 @@
     display: none;
 }
 
+.clearHis {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .table td input,
 button {
     font-weight: bold;

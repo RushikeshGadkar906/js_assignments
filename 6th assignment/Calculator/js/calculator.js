@@ -27,9 +27,13 @@ function calResult() {
 
 }
 
-
 function Clear() {
     myNum = "";
     calculate.value = "";
     // console.log(myNum);
+}
+
+function clearHis() {
+    var removeDiv = document.getElementById("res");
+    removeDiv.parentNode.removeChild(removeDiv);
 }
